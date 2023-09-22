@@ -1,0 +1,97 @@
+
+
+# Create the Plotly bar chart where X is Disease and Y is its count
+fig_patient_age = px.bar(
+    count_patient_age_group,
+    x="age_group",
+    y="count",  # Use the "count" column for the Y-axis
+    title="Age Group of Patients",
+    color_discrete_sequence=["#0083B8"] * len(count_patient_age_group),
+    template="plotly_white",
+)
+
+
+
+
+
+
+
+
+################################################################
+
+
+# Doctor Distribution
+with col4:
+    count_doctor = df['doctorname'].value_counts().reset_index()
+    count_doctor.columns = ['doctorname', 'count']
+
+    custom_colors = ['#E87D0D', '#3CB44B']  
+
+    st.plotly_chart(px.pie(
+        count_doctor,
+        names='doctorname',
+        values='count',
+        title="Doctor Distribution",
+        color_discrete_sequence=custom_colors,
+        template="plotly_white",
+    ).update_traces(textposition='inside', textinfo='percent+label'))
+
+col5, col6 = st.columns(2)
+
+# Gender Distribution of Patients
+with col5:
+    count_patient_disease = df['category'].value_counts().reset_index()
+    count_patient_disease.columns = ['category', 'count']
+
+    custom_colors = ['#E87D0D', '#3CB44B']  
+
+    st.plotly_chart(px.pie(
+        count_patient_disease,
+        names='category',
+        values='count',
+        title="Disease Distribution of Patients",
+        color_discrete_sequence=custom_colors,
+        template="plotly_white",
+    ).update_traces(textposition='inside', textinfo='percent+label'))
+
+# Age Group Distribution
+with col6:
+    count_doctor = df['age_group'].value_counts().reset_index()
+    count_doctor.columns = ['age_group', 'count']
+
+    custom_colors = ['#E87D0D', '#3CB44B']  
+
+    st.plotly_chart(px.pie(
+        count_doctor,
+        names='age_group',
+        values='count',
+        title="Doctor Distribution",
+        color_discrete_sequence=custom_colors,
+        template="plotly_white",
+    ).update_traces(textposition='inside', textinfo='percent+label'))
+
+# with col7:
+    # count_case_per_month
+
+
+
+
+        # # [BAR CHART - Patient Count per Disease]
+    # count_patient_disease = df_selection['category'].value_counts().reset_index()
+    # count_patient_disease.columns = ['category', 'count']
+
+    # fig_patient_disease = px.bar(
+    #     count_patient_disease,
+    #     x="category",
+    #     y="count",
+    #     title="Patient Count per Disease",
+    #     color=["#726A95", "#B9BBDF", "#04f", "#04f", "#04f"],
+    #     color_discrete_sequence=["#726A95", "#B9BBDF"] * len(count_patient_disease),
+    #     template="plotly_white",
+    # )
+
+    # fig_patient_disease.update_layout(
+    #     plot_bgcolor="rgba(0,0,0,0)",
+    #     yaxis=dict(showgrid=False)
+    # )
+    # st.plotly_chart(fig_patient_disease)¸
