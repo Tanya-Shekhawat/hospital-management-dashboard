@@ -1,5 +1,5 @@
 streamlit
 numpy
 pandas
-plotly_express
+plotly.express
 altair
