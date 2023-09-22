@@ -56,6 +56,9 @@ pexpect @ file:///home/conda/feedstock_root/build_artifacts/pexpect_166729751607
 pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1602536217715/work
 Pillow==9.5.0
 platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1690813113769/work
+plotly.express
+plotly
+plotly_express
 pluggy @ file:///Users/cbousseau/work/recipes/ci_py311/pluggy_1677906980825/work
 prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1688565951714/work
 protobuf==4.24.3
