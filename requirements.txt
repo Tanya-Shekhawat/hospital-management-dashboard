@@ -59,6 +59,7 @@ platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_16
 plotly.express
 plotly
 plotly_express
+plotly-express 
 pluggy @ file:///Users/cbousseau/work/recipes/ci_py311/pluggy_1677906980825/work
 prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1688565951714/work
 protobuf==4.24.3
